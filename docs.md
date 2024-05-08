@@ -73,50 +73,191 @@ Elements list:
 
 # 1. Input
 ## 1.1 Button
+### HTML
+```html
+<input type="button">
+```
+
+### sForm
+```
+!button {value, onclick} {optional: id}
+```
+
+To use spaces in the button text, you can use quotes.
+
+I recommend using function names in onclick parameter. If you write `!button Play startPlaying` it will be interpreted as `<input type="button" onclick="startPlaying()">Play</button>`
+
+However, if you want to use JS code instead of a function name, you can use quotes.
+
+### Example
+```
+!button Start startFunction
+```
+
+If you need to use spaces in the button text, you can use other syntax:
+
+```
+!button "Press to start" startFunction
+```
+
+If you want to use JS code in onclick:
+
+```
+!button "Say hello" "alert('Hello!')"
+```
 
 ## 1.2 Checkbox
+### HTML
+```html
+<input type="checkbox">
+```
+
+### sForm
+Not checked checkbox:
+
+```
+!checkbox {name, value} {optional: id}
+```
+
+Checked checkbox:
+
+```
+!checkbox + {name, value} {optional: id}
+```
+
+### Example
+Second checkbox is checked:
+
+```
+!checkbox hobby reading
+!checkbox + hobby music
+```
 
 ## 1.3 Color
+To be added later.
 
 ## 1.4 Date
+To be added later.
 
 ## 1.5 Local Date
 No support planned.
 
 ## 1.6 Email
+### HTML
+```html
+<input type="email">
+```
+
+### sForm
+```
+!email {name} {optional: placeholder, id}
+```
+
+### Example
+```
+!email userEmail
+```
 
 ## 1.7 File
+To be added later.
 
 ## 1.8 Hidden
+To be added later.
 
 ## 1.9 Image
+To be added later.
 
 ## 1.10 Month
 No support planned.
 
 ## 1.11 Number
+To be added later.
 
 ## 1.12 Password
+### HTML
+```html
+<input type="password">
+```
+
+### sForm Syntax
+```
+!password {name} {optional: placeholder, id}
+```
+
+### Example
+```
+!password userPassword
+```
 
 ## 1.13 Radio
+### HTML
+```html
+<input type="radio">
+```
+
+### sForm Syntax
+```
+!radio {name, value} {optional: id}
+```
+
+### Example
+```
+!radio gender male
+```
 
 ## 1.14 Range
+To be added later.
 
 ## 1.15 Reset
+To be added later.
 
 ## 1.16 Search
 No support planned.
 
 ## 1.17 Submit
+### HTML
+```html
+<input type="submit">
+```
+
+### sForm
+```
+!submit {value} {optional: id}
+```
+
+### Example
+```
+!submit Submit
+```
+
+If you need to use spaces in the button text, you can use other syntax:
+
+```
+!submit "Click Me!"
+```
 
 ## 1.18 Phone Number
+To be added later.
 
 ## 1.19 Text
+### HTML
+```html
+<input type="text">
+```
+### sForm Syntax
+```
+!text {name} {optional: placeholder, id}
+```
+### Example
+```
+!text userSurname
+```
 
 ## 1.20 Time
 No support planned.
 
 ## 1.21 URL
+To be added later.
 
 ## 1.22 Week
 No support planned.
@@ -260,4 +401,3 @@ No support planned.
 
 # 9. Output
 No support planned.
-
